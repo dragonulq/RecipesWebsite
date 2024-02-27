@@ -1,0 +1,25 @@
+.home-app-bar {
+    height: 8vh;
+    min-height: 64px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    padding-left: 1%;
+}
+
+.app-bar-container {
+    margin: 0;
+    height: 100%;
+    min-width: 98.5%;
+    background-color: darkred;
+    padding: 0;
+}
+
+.app-bar-toolbar {
+    height: 100%;
+}
+
+.buttons-cointainer {
+    height: 100%;
+}
+
