@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import '../styles/AppBar.css';
+import styles from '../styles/AppBar.css';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -61,7 +61,7 @@ function ResponsiveAppBar() {
               LOGO
             </Typography>
 
-            <Box className="buttons-container" sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
+            <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
               <IconButton
                   size="large"
                   aria-label="account of current user"

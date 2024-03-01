@@ -11,7 +11,6 @@
     margin: 0;
     height: 100%;
     min-width: 98.5%;
-    background-color: darkred;
     padding: 0;
 }
 
@@ -19,7 +18,7 @@
     height: 100%;
 }
 
-.buttons-cointainer {
-    height: 100%;
+.MuiBox-root {
+    max-height: 100%;
 }
 
