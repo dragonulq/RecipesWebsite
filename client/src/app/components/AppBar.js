@@ -13,7 +13,6 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import styles from '../styles/AppBar.css';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -39,7 +38,7 @@ function ResponsiveAppBar() {
 
 
   return (
-      <AppBar className="home-app-bar" position="static">
+      <AppBar sx={{backgroundColor: 'red'}} className="home-app-bar" position="static">
         <Container className="app-bar-container">
           <Toolbar className="app-bar-toolbar" disableGutters>
             <AdbIcon sx={{display: {xs: 'none', md: 'flex'}, mr: 1}}/>
