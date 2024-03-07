@@ -13,6 +13,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import '../styles/AppBar.css';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -38,7 +39,7 @@ function ResponsiveAppBar() {
 
 
   return (
-      <AppBar sx={{backgroundColor: 'red'}} className="home-app-bar" position="static">
+      <AppBar className="home-app-bar" position="static">
         <Container className="app-bar-container">
           <Toolbar className="app-bar-toolbar" disableGutters>
             <AdbIcon sx={{display: {xs: 'none', md: 'flex'}, mr: 1}}/>
@@ -130,7 +131,7 @@ function ResponsiveAppBar() {
             <Box sx={{flexGrow: 0}}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{p: 0}}>
-                  <Avatar alt="Remy Sharp" src="../../../public/next.svg"/>
+                  <Avatar alt="Remy Sharp" src="https://i.imgur.com/srL97Eq.png"/>
                 </IconButton>
               </Tooltip>
               <Menu
