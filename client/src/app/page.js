@@ -9,12 +9,12 @@ export default function Home() {
   return (
       <main className={styles.main}>
         <ResponsiveAppBar/>
-        <Stack direction="column">
+        <Stack>
           <Container style={{padding: 0, margin: 0, maxWidth:'100%', display: 'flex', flexWrap: 'wrap'}}>
-            <div style={{flex: 'auto', width: '65%'}}>
-              <img style={{width: '100%', height: '100%'}} src="https://i.imgur.com/srL97Eq.png" id="fixedImage" />
+            <div style={{flex: 'auto', width: '58%'}}>
+              <img style={{width: '100%', height: '100%'}} src="https://i.imgur.com/srL97Eq.png" alt="Missing image" id="fixedImage" />
             </div>
-            <div style={{flex: 'auto', backgroundColor: "green", minWidth: '515px', minHeight: '650px', width: '35%'}}>
+            <div style={{flex: 'auto', backgroundColor: "green", minWidth: '515px', minHeight: '650px', width: '42%'}}>
 
 
             </div>
