@@ -33,3 +33,4 @@ build/
 .vscode/
 /plan.txt
 /client/node_modules/
+/client/shell.nix

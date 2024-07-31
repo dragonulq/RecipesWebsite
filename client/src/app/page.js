@@ -14,7 +14,7 @@ export default function Home() {
             <div style={{flex: 'auto', width: '58%'}}>
               <img style={{width: '100%', height: '100%'}} src="https://i.imgur.com/srL97Eq.png" alt="Missing image" id="fixedImage" />
             </div>
-            <div style={{flex: 'auto', backgroundColor: "green", minWidth: '515px', minHeight: '650px', width: '42%'}}>
+            <div style={{flex: 'auto', backgroundColor: "blue", minWidth: '515px', minHeight: '650px', width: '42%'}}>
 
 
             </div>
