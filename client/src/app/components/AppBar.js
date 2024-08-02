@@ -48,6 +48,12 @@ function ResponsiveAppBar() {
       const isXs = window.matchMedia(breakpoints.xs).matches;
       const isMd = window.matchMedia(breakpoints.md).matches;
       const appBar = document.getElementsByClassName("home-app-bar").item(0);
+      const logoContainer = document.getElementsByClassName("logo-container").item(0);
+      const logo = document.getElementsByClassName("logo").item(0);
+      const logoContainerHeight = getComputedStyle(logoContainer).height;
+      logo.style.minHeight = logoContainerHeight;
+      logo.style.maxHeight = logoContainerHeight;
+
       if(isMd) {
         const originalViewportHeight= window.screen.height;
         const heightFactor= 0.1;
@@ -70,8 +76,15 @@ function ResponsiveAppBar() {
               sx={{height:{xs:"4vh", md:"12vh"},
                    minHeight:{xs:"40px", md:"100px"}}}
       >
-        <Container className="search-bar-container" sx={{display:{xs:'none', md:'block'}}}>
-
+        <Container className="search-bar-container" sx={{display:{xs:'none', md:'flex'}}}>
+          <div className="logo-container">
+            <img src="images/img.png" alt="logo" className="logo"/>
+          </div>
+          {new Array(7).fill().map((_, i) => (
+              <div key={i} style={{backgroundColor: 'brown' }}>
+                Dummy div {i}
+              </div>
+          ))}
         </Container>
         <Container className="options-container" sx={{display:{xs:'none', md:'block'}}}>
 
