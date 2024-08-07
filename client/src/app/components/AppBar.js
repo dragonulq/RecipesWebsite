@@ -15,6 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import '../styles/AppBar.css';
 import {useEffect} from "react";
+import SearchBar from './SearchBar';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -76,10 +77,14 @@ function ResponsiveAppBar() {
               sx={{height:{xs:"4vh", md:"12vh"},
                    minHeight:{xs:"40px", md:"100px"}}}
       >
-        <Container className="search-bar-container" sx={{display:{xs:'none', md:'flex'}}}>
+        <Container className="outer-search-bar-container" sx={{display:{xs:'none', md:'flex'}}}>
           <div className="logo-container">
             <img src="images/img.png" alt="logo" className="logo"/>
           </div>
+          <div className="inner-search-bar-container">
+            <SearchBar  />
+          </div>
+
           {new Array(7).fill().map((_, i) => (
               <div key={i} style={{backgroundColor: 'brown' }}>
                 Dummy div {i}
