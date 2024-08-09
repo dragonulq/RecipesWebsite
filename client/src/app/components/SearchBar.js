@@ -3,6 +3,8 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CircularProgress from '@mui/material/CircularProgress';
 import '../styles/SearchBar.css';
+import { useRef, useEffect } from 'react';
+
 
 function sleep(duration) {
     return new Promise((resolve) => {
@@ -16,6 +18,25 @@ export default function SearchBar() {
     const [open, setOpen] = React.useState(false);
     const [options, setOptions] = React.useState([]);
     const loading = open && options.length === 0;
+    const searchBarRef = useRef(null);
+
+    React.useEffect(() => {
+        // Ensure the buttonRef.current is available
+        const current = searchBarRef.current;
+        if(current === null) {
+            alert("SearchBarRef.current was null!");
+            return undefined;
+        }
+        current.style.display = "flex";
+        current.style.justifyContent = "center";
+        const firstChild = current.children[0];
+        firstChild.className = "";
+        firstChild.style.display = "flex";
+        firstChild.style.width = "90%";
+        firstChild.children[0].style.display = "flex";
+
+        console.log("Ran Search Bar useEffect");
+    }, []);
 
     React.useEffect(() => {
         let active = true;
@@ -47,8 +68,15 @@ export default function SearchBar() {
         <Autocomplete
             id="asynchronous-demo"
             className="async-autocomplete"
-            size="medium"
+            ref={searchBarRef}
+            sx={{width: '90%',
+                height: 38,
 
+                '& div .MuiInputBase-root': {
+                    padding: "0 39px 0 0 !important"
+
+                }
+            }}
             open={open}
             onOpen={() => {
                 setOpen(true);
@@ -63,7 +91,7 @@ export default function SearchBar() {
             renderInput={(params) => (
                 <TextField
                     {...params}
-                    sx={{maxWidth:"100%", maxHeight:"100%"}}
+                    sx={{maxWidth:"100%", maxHeight:"100%", height: 50}}
                     InputProps={{
                         ...params.InputProps,
                         endAdornment: (
