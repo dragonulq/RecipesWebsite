@@ -1,21 +1,11 @@
 'use client';
 import * as React from 'react';
+import {useEffect} from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import '../styles/AppBar.css';
-import {useEffect} from "react";
 import SearchBar from './SearchBar';
+import Button from '@mui/material/Button';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -23,6 +13,14 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const buttonStyle = {
+    borderRadius: '50px',  // This makes the button pill-shaped
+    padding: '10px 20px',  // Add some padding for a better appearance
+    borderWidth: '2px',    // Optional: adjust the border thickness
+    borderColor: 'grey',   // Optional: adjust the border color
+    textTransform: 'none', // Optional: disable uppercase text
+    margin:'0px 5px',
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -77,19 +75,37 @@ function ResponsiveAppBar() {
               sx={{height:{xs:"4vh", md:"12vh"},
                    minHeight:{xs:"40px", md:"100px"}}}
       >
-        <Container className="outer-search-bar-container" sx={{display:{xs:'none', md:'flex'}}}>
+        <Container className="outer-search-bar-container" sx={{display:{xs:'none', md:'flex'}, alignItems:"center"}}>
           <div className="logo-container">
             <img src="images/img.png" alt="logo" className="logo"/>
           </div>
           <div className="inner-search-bar-container">
             <SearchBar  />
           </div>
+          {/*<Button variant="contained"*/}
+          {/*        sx={{height:"50%", borderTopLeftRadius:"50%", borderBottomLeftRadius:"50%", padding:"10px 20px", fontSize:"12px"}}>*/}
+          {/*  Sign Up*/}
+          {/*</Button>*/}
+          <div style={{display:"flex", justifyContent:"end", flexGrow:1}}>
+            <Button
+                variant="outlined"
+                sx={buttonStyle}
+            >
+              Sign Up
+            </Button>
+            <Button
+                variant="contained"
+                sx={buttonStyle}
+            >
+              Log In
+            </Button>
+          </div>
 
-          {new Array(7).fill().map((_, i) => (
-              <div key={i} style={{backgroundColor: 'brown' }}>
-                Dummy div {i}
-              </div>
-          ))}
+          {/*{new Array(7).fill().map((_, i) => (*/}
+          {/*    <div key={i} style={{backgroundColor: 'brown' }}>*/}
+          {/*      Dummy div {i}*/}
+          {/*    </div>*/}
+          {/*))}*/}
         </Container>
         <Container className="options-container" sx={{display:{xs:'none', md:'block'}}}>
 

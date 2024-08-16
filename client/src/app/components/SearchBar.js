@@ -6,7 +6,6 @@ import '../styles/SearchBar.css';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 
-
 function sleep(duration) {
     return new Promise((resolve) => {
         setTimeout(() => {
