@@ -26,15 +26,34 @@
     background-color: white;
     min-width: 100%;
     min-height: 50%;
-    padding: 0% 12%;
+    /*padding-left: 12%;*/
 }
+
+.padding-div {
+    height: 100%;
+    background-color: inherit;
+    flex: 0 15 12%;
+    min-width: 0;
+}
+
+.login-buttons-div {
+    flex-shrink: 0;
+    flex-grow: 10;
+}
+
+
+/*@media (min-width: 600px) and (max-width: 970px) {*/
+/*    .outer-search-bar-container {*/
+/*        padding-left: 2%;*/
+/*    }*/
+/*}*/
 
 .inner-search-bar-container {
     display: flex;
     justify-content: center;
     align-items: center;
     max-height: 100%;
-    min-width: 55%;
+    min-width: 45%;
 }
 
 .options-container {

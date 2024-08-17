@@ -75,18 +75,22 @@ function ResponsiveAppBar() {
               sx={{height:{xs:"4vh", md:"12vh"},
                    minHeight:{xs:"40px", md:"100px"}}}
       >
-        <Container className="outer-search-bar-container" sx={{display:{xs:'none', md:'flex'}, alignItems:"center"}}>
+        <Container className="outer-search-bar-container"
+                   sx={{display: {xs: 'none', md: 'flex'}, alignItems: "center"}}>
+          <div className="padding-div">
+
+          </div>
           <div className="logo-container">
             <img src="images/img.png" alt="logo" className="logo"/>
           </div>
           <div className="inner-search-bar-container">
-            <SearchBar  />
+            <SearchBar/>
           </div>
           {/*<Button variant="contained"*/}
           {/*        sx={{height:"50%", borderTopLeftRadius:"50%", borderBottomLeftRadius:"50%", padding:"10px 20px", fontSize:"12px"}}>*/}
           {/*  Sign Up*/}
           {/*</Button>*/}
-          <div style={{display:"flex", justifyContent:"end", flexGrow:1}}>
+          <div className="login-buttons-div">
             <Button
                 variant="outlined"
                 sx={buttonStyle}
@@ -101,11 +105,15 @@ function ResponsiveAppBar() {
             </Button>
           </div>
 
+
           {/*{new Array(7).fill().map((_, i) => (*/}
           {/*    <div key={i} style={{backgroundColor: 'brown' }}>*/}
           {/*      Dummy div {i}*/}
           {/*    </div>*/}
           {/*))}*/}
+          <div className="padding-div">
+
+          </div>
         </Container>
         <Container className="options-container" sx={{display:{xs:'none', md:'block'}}}>
 

@@ -74,7 +74,7 @@ export default function SearchBar() {
             className="async-autocomplete"
             ref={searchBarRef}
             sx={{
-                width: '90%',
+                width: '100%',
                 height: 38,
 
                 '& div .MuiInputBase-root': {
