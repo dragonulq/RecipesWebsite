@@ -34,6 +34,7 @@
     background-color: inherit;
     flex: 0 15 12%;
     min-width: 0;
+    background-color: green;
 }
 
 .login-buttons-div {
@@ -57,9 +58,10 @@
 }
 
 .options-container {
-    background-color: red;
+    background-color: white;
     min-width: 100%;
     min-height: 50%;
+    align-items: flex-end;
 }
 
 .MuiBox-root {

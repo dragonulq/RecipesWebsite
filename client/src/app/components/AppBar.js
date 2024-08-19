@@ -6,9 +6,11 @@ import Container from '@mui/material/Container';
 import '../styles/AppBar.css';
 import SearchBar from './SearchBar';
 import Button from '@mui/material/Button';
+import HeaderOption from './HeaderOption';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const headerOptions = ['What to cook', 'Recipes', 'Ingredients', 'Ocassions', 'About'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -115,8 +117,18 @@ function ResponsiveAppBar() {
 
           </div>
         </Container>
-        <Container className="options-container" sx={{display:{xs:'none', md:'block'}}}>
+        <Container className="options-container" sx={{display: {xs: 'none', md: 'flex'}}}>
+          <div className="padding-div">
 
+          </div>
+          {
+            headerOptions.map((o, i) => (
+              <HeaderOption optionName={o}/>
+            ))
+          }
+          <div className="padding-div">
+
+          </div>
         </Container>
       </AppBar>
   );
