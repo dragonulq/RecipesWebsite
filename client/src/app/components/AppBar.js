@@ -9,13 +9,21 @@ import Button from '@mui/material/Button';
 import HeaderOption from './HeaderOption';
 
 const headerOptions = ['What to cook', 'Recipes', 'Ingredients', 'Ocassions', 'About'];
-const headerOptionsInPopover = {
-    'What to cook': {
-        'Staff Picks': ['Potluck Desserts', 'Chicken Breast Recipes', 'Summer Baking Bucket List', 'Sheet-Pan Vegetarian Recipes', 'Easy Side Dishes'],
-        'From our Newsletter': ['The Cooking Newsletter', 'Five Weeknight Dishes', 'The Veggie'],
-        'Perfect For': ['One-Pot Dinners', 'Weeknight Chicken', 'Quick Pastas', '30 Minute Vegetarian', 'Easy Baking']
+const headerOptionsInPopover = [
+    {'What to cook': [
+            {'Staff Picks': ['Potluck Desserts', 'Chicken Breast Recipes', 'Summer Baking Bucket List', 'Sheet-Pan Vegetarian Recipes', 'Easy Side Dishes']},
+            {'From our Newsletter': ['The Cooking Newsletter', 'Five Weeknight Dishes', 'The Veggie']},
+            {'Perfect For': ['One-Pot Dinners', 'Weeknight Chicken', 'Quick Pastas', '30 Minute Vegetarian', 'Easy Baking']}
+
+    ]},
+    {
+        'Recipes':[
+            {},
+            {},
+            {}
+        ]
     }
-};
+];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -130,7 +138,7 @@ function ResponsiveAppBar() {
                 </div>
                 {
                     headerOptions.map((o, i) => (
-                        <HeaderOption key={i} optionName={o} optionsPopover={headerOptionsInPopover['What to cook']}/>
+                        <HeaderOption key={i} optionName={o} optionsPopover={headerOptionsInPopover[0]}/>
                     ))
                 }
                 <div className="padding-div">
